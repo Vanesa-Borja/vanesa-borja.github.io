@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanesa Borja · Portafolio digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f7;--ink:#12262e;--muted:#52666e;--line:#cfdadd;--blue:#2b50aa;--mint:#1f8a70;--card:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1b20;--ink:#e6eef0;--muted:#9bb0b6;--line:#294049;--blue:#8fb0ff;--mint:#5fd0b2;--card:#162830}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--blue)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;padding:16px max(20px,calc((100% - 960px)/2));border-bottom:1px solid var(--line)}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--blue)}
+main{max-width:960px;margin:auto;padding:0 20px}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+#inicio{padding-top:72px}
+h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;letter-spacing:-.02em}
+.lead{max-width:60ch;color:var(--muted);font-size:1.2rem;margin:20px 0 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:10px}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.box h3{font-size:1.2rem;margin-bottom:8px}
+.box p{margin:0}
+.box ul{margin:0;padding-left:20px}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;color:var(--mint);border:1px solid var(--mint);border-radius:99px;padding:1px 10px;margin-bottom:10px}
+.eje{margin-top:34px}
+.eje h3{font-size:1.35rem;margin-bottom:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 18px;font-weight:600}
+details div{padding:0 18px 18px}
+dl{margin:0}
+dt{font-weight:600;margin-top:10px}
+dd{margin:2px 0 0;color:var(--muted)}
+footer{max-width:960px;margin:auto;padding:30px 20px 50px;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<nav aria-label="Secciones">
+  <a href="#inicio">Inicio</a>
+  <a href="#cv">Mi CV</a>
+  <a href="#proyectos">Mis proyectos</a>
+  <a href="#actividades">Actividades</a>
+</nav>
+<main>
+
+<section id="inicio">
+  <h1>Vanesa Borja</h1>
+  <p class="lead">Estudiante de quinto semestre de Ingeniería Informática. Aquí reúno quién soy, qué sé hacer, cómo aprendo y los proyectos que he construido.</p>
+</section>
+
+<section id="cv">
+  <h2>Mi CV</h2>
+  <p class="sub">Versión web de mi currículum.</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Perfil profesional</h3>
+      <p>Estudiante de quinto semestre de Ingeniería Informática en el Tecnológico de Estudios Superiores de San Felipe del Progreso. Me interesa la inteligencia artificial y cuento con conocimientos en bases de datos, que busco aplicar en proyectos que organicen y aprovechen la información. Estoy en formación y busco prácticas profesionales para seguir desarrollando mis habilidades técnicas.</p>
+    </div>
+    <div class="box">
+      <h3>Formación</h3>
+      <ul>
+        <li>Ingeniería Informática, 5.º semestre. Tecnológico de Estudios Superiores de San Felipe del Progreso.</li>
+        <li>Curso: Artificial Intelligence Technology and Applications.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Habilidades técnicas</h3>
+      <ul>
+        <li>Bases de datos y SQL</li>
+        <li>Python</li>
+        <li>Astro y FastAPI</li>
+        <li>Visual Studio Code</li>
+        <li>Arduino</li>
+        <li>Microsoft Word y PowerPoint</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Habilidades blandas</h3>
+      <ul>
+        <li>Trabajo en equipo</li>
+        <li>Responsabilidad</li>
+        <li>Resolución de problemas</li>
+        <li>Organización</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Idiomas</h3>
+      <ul>
+        <li>Español: nativo</li>
+        <li>Inglés: básico-intermedio</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <h2>Mis proyectos</h2>
+  <p class="sub">Proyectos de software y electrónica. Cada ficha explica el problema, mi aportación y el estado actual.</p>
+  <div class="grid">
+
+    <article class="box">
+      <span class="tag">En desarrollo</span>
+      <h3>Lotería digital trilingüe</h3>
+      <dl>
+        <dt>Tipo</dt><dd>Material educativo digital con electrónica. Trabajo en equipo.</dd>
+        <dt>Problema que resuelve</dt><dd>Apoyar a niños de una escuela con vocabulario en español, inglés y mazahua. Está pensada para donarse a una escuela.</dd>
+        <dt>Tecnologías</dt><dd>Arduino, Visual Studio Code, placa NodeMCU ESP32, módulo lector de micro SD y cables jumper.</dd>
+        <dt>Mi aportación</dt><dd>Busqué las palabras para la lotería y ayudé a elaborar un documento con diagramas UML.</dd>
+        <dt>Pendiente</dt><dd>Terminar el desarrollo y entregarla a la escuela.</dd>
+      </dl>
+    </article>
+
+    <article class="box">
+      <span class="tag">Finalizado</span>
+      <h3>Taller de Word y PowerPoint para niños de primaria</h3>
+      <dl>
+        <dt>Tipo</dt><dd>Proyecto integrador de alfabetización digital. Trabajo en equipo.</dd>
+        <dt>Periodo</dt><dd>Marzo a julio de 2026.</dd>
+        <dt>Problema que resuelve</dt><dd>Enseñar a niños de primaria a usar Word y PowerPoint.</dd>
+        <dt>Tecnologías</dt><dd>Word, PowerPoint y presentaciones de apoyo.</dd>
+        <dt>Mi aportación</dt><dd>Ayudé con la presentación y apoyé a los niños que no entendían bien.</dd>
+      </dl>
+    </article>
+
+    <article class="box">
+      <span class="tag">Finalizado</span>
+      <h3>Tienda de maquillaje en línea</h3>
+      <dl>
+        <dt>Tipo</dt><dd>Desarrollo web completo para una materia. Proyecto individual.</dd>
+        <dt>Fecha</dt><dd>Septiembre de 2026.</dd>
+        <dt>Tecnologías</dt><dd>Astro, FastAPI (Python) y Visual Studio Code, con imágenes de productos.</dd>
+        <dt>Mi aportación</dt><dd>Realicé todo el proyecto: diseño de la interfaz, servidor y programación.</dd>
+        <dt>Evidencia</dt><dd>Capturas de pantalla por agregar.</dd>
+      </dl>
+    </article>
+
+  </div>
+</section>
+
+<section id="actividades">
+  <h2>Actividades de tutoría</h2>
+  <p class="sub">Dos actividades de desarrollo personal, dos de aprendizaje y dos de identidad profesional. Cada una incluye fecha, contexto, evidencia, enlace o archivo y una reflexión de 100 a 150 palabras.</p>
+  <div id="ejes"></div>
+</section>
+
+</main>
+<footer>
+  Portafolio de tutoría · 5.º semestre. No se publican datos personales sensibles.
+</footer>
+
+<script>
+const ejes = [
+  ["Desarrollo personal y social", "Ej.: Manejo emocional, Toma de decisiones, Proyecto de vida"],
+  ["Aprendizaje y proyectos", "Ej.: Aprendizaje autorregulado, Administración por proyectos"],
+  ["Identidad profesional y vocación", "Ej.: Plan de carrera, Ética profesional"]
+];
+document.getElementById("ejes").innerHTML = ejes.map(([eje, ejemplo]) => `
+  <div class="eje">
+    <h3>${eje}</h3>
+    ${[1,2].map(n => `
+    <details>
+      <summary>Actividad ${n}: por elegir <span style="color:var(--muted);font-weight:400">(${ejemplo})</span></summary>
+      <div><dl>
+        <dt>Fecha</dt><dd>Día, mes y año.</dd>
+        <dt>Contexto</dt><dd>Qué reto realizaste y por qué.</dd>
+        <dt>Evidencia</dt><dd>Producto elaborado (imagen, documento, tablero, video).</dd>
+        <dt>Enlace o archivo</dt><dd><a href="#">Agrega aquí el enlace</a></dd>
+        <dt>Reflexión (100 a 150 palabras)</dt><dd>Escribe aquí tu reflexión individual.</dd>
+      </dl></div>
+    </details>`).join("")}
+  </div>`).join("");
+</script>
+</body>
+</html>
