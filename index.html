@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanesa Borja · Portafolio digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f7;--ink:#12262e;--muted:#52666e;--line:#cfdadd;--blue:#2b50aa;--mint:#1f8a70;--card:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1b20;--ink:#e6eef0;--muted:#9bb0b6;--line:#294049;--blue:#8fb0ff;--mint:#5fd0b2;--card:#162830}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;padding:16px max(20px,calc((100% - 960px)/2));border-bottom:1px solid var(--line)}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--blue)}
+main{max-width:960px;margin:auto;padding:0 20px}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+#inicio{padding-top:72px}
+h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;letter-spacing:-.02em}
+.lead{max-width:60ch;color:var(--muted);font-size:1.2rem;margin:20px 0 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:10px}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.box h3{font-size:1.2rem;margin-bottom:8px}
+.box ul{margin:0;padding-left:20px}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;color:var(--mint);border:1px solid var(--mint);border-radius:99px;padding:1px 10px;margin-bottom:10px}
+.btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600}
+@media (prefers-color-scheme:dark){.btn{color:#0f1b20}}
+.eje{margin-top:34px}
+.eje h3{font-size:1.35rem;margin-bottom:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 18px;font-weight:600}
+details div{padding:0 18px 18px}
+dl{margin:0}
+dt{font-weight:600;margin-top:10px}
+dd{margin:2px 0 0;color:var(--muted)}
+footer{max-width:960px;margin:auto;padding:30px 20px 50px;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<nav aria-label="Secciones">
+  <a href="#inicio">Inicio</a>
+  <a href="#cv">Mi CV</a>
+  <a href="#proyectos">Mis proyectos</a>
+  <a href="#actividades">Actividades</a>
+</nav>
+<main>
+
+<section id="inicio">
+  <h1>Vanesa Borja</h1>
+  <p class="lead">Estudiante de quinto semestre de Ingeniería Informática. Aquí reúno quién soy, qué sé hacer, cómo aprendo y los proyectos que he construido.</p>
+  <!-- EDITA: escribe 2 o 3 líneas sobre tus intereses (software, redes, datos, IA, etc.) -->
+</section>
+
+<section id="cv">
+  <h2>Mi CV</h2>
+  <p class="sub">Versión web de mi currículum. También puedes descargarlo en PDF.</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Perfil profesional</h3>
+      <p><!-- EDITA: presentación de 3 a 5 líneas sobre tus intereses y perfil --> Escribe aquí tu presentación.</p>
+    </div>
+    <div class="box">
+      <h3>Formación</h3>
+      <ul>
+        <li>Ingeniería Informática, 5.º semestre (escribe tu institución)</li>
+        <li>Cursos o certificaciones (solo los reales)</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Habilidades técnicas</h3>
+      <ul>
+        <li>Lenguajes y herramientas que dominas</li>
+        <li>Bases de datos, redes, control de versiones…</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Habilidades blandas e idiomas</h3>
+      <ul>
+        <li>Trabajo en equipo, comunicación…</li>
+        <li>Idiomas y nivel</li>
+      </ul>
+    </div>
+  </div>
+  <a class="btn" href="cv.pdf" download>Descargar CV en PDF</a>
+</section>
+
+<section id="proyectos">
+  <h2>Mis proyectos</h2>
+  <p class="sub">Proyectos de software, aplicaciones, bases de datos, sitios web o prototipos. Cada ficha explica el problema, mi aportación y el estado actual.</p>
+  <div class="grid" id="lista-proyectos"></div>
+</section>
+
+<section id="actividades">
+  <h2>Actividades de tutoría</h2>
+  <p class="sub">Dos actividades de desarrollo personal, dos de aprendizaje y dos de identidad profesional. Cada una incluye fecha, contexto, evidencia, enlace o archivo y una reflexión de 100 a 150 palabras.</p>
+  <div id="ejes"></div>
+</section>
+
+</main>
+<footer>
+  Portafolio de tutoría · 5.º semestre. No se publican datos personales sensibles.
+</footer>
+
+<script>
+// Proyectos: duplica o edita estos bloques
+const proyectos = [1,2,3].map(n => ({
+  nombre: "Nombre del proyecto " + n,
+  estado: "Finalizado / En desarrollo / En prueba / Idea"
+}));
+document.getElementById("lista-proyectos").innerHTML = proyectos.map(p => `
+  <article class="box">
+    <span class="tag">${p.estado}</span>
+    <h3>${p.nombre}</h3>
+    <dl>
+      <dt>Problema que resuelve</dt><dd>Describe el problema y los usuarios.</dd>
+      <dt>Tecnologías</dt><dd>Herramientas y lenguajes usados.</dd>
+      <dt>Mi aportación</dt><dd>Qué hiciste tú en el proyecto.</dd>
+      <dt>Evidencia</dt><dd>Captura, demo, video o <a href="#">enlace al repositorio</a>.</dd>
+    </dl>
+  </article>`).join("");
+
+// Actividades: cambia el título de cada una cuando la elijas
+const ejes = [
+  ["Desarrollo personal y social", "Ej.: Manejo emocional, Toma de decisiones, Proyecto de vida"],
+  ["Aprendizaje y proyectos", "Ej.: Aprendizaje autorregulado, Administración por proyectos"],
+  ["Identidad profesional y vocación", "Ej.: Plan de carrera, Ética profesional"]
+];
+document.getElementById("ejes").innerHTML = ejes.map(([eje, ejemplo]) => `
+  <div class="eje">
+    <h3>${eje}</h3>
+    ${[1,2].map(n => `
+    <details>
+      <summary>Actividad ${n}: por elegir <span style="color:var(--muted);font-weight:400">(${ejemplo})</span></summary>
+      <div><dl>
+        <dt>Fecha</dt><dd>Día, mes y año.</dd>
+        <dt>Contexto</dt><dd>Qué reto realizaste y por qué.</dd>
+        <dt>Evidencia</dt><dd>Producto elaborado (imagen, documento, tablero, video).</dd>
+        <dt>Enlace o archivo</dt><dd><a href="#">Agrega aquí el enlace</a></dd>
+        <dt>Reflexión (100 a 150 palabras)</dt><dd>Escribe aquí tu reflexión individual.</dd>
+      </dl></div>
+    </details>`).join("")}
+  </div>`).join("");
+</script>
+</body>
+</html>
