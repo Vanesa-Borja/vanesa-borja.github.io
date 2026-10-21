@@ -16,7 +16,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.6 "Source Sans 3",system-ui,sans-serif}
 h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
 a{color:var(--blue)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
 nav{display:flex;flex-wrap:wrap;gap:6px 22px;padding:16px max(20px,calc((100% - 960px)/2));border-bottom:1px solid var(--line)}
 nav a{color:var(--ink);text-decoration:none;font-weight:600}
 nav a:hover{color:var(--blue)}
@@ -31,10 +31,13 @@ h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:10px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
 .box h3{font-size:1.2rem;margin-bottom:8px}
+.box p{margin:0}
 .box ul{margin:0;padding-left:20px}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600}
+.btn.alt{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+@media (prefers-color-scheme:dark){.btn{color:#0f1b20}.btn.alt{color:var(--blue)}}
 .tag{display:inline-block;font-size:.85rem;font-weight:600;color:var(--mint);border:1px solid var(--mint);border-radius:99px;padding:1px 10px;margin-bottom:10px}
-.btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600}
-@media (prefers-color-scheme:dark){.btn{color:#0f1b20}}
 .eje{margin-top:34px}
 .eje h3{font-size:1.35rem;margin-bottom:12px}
 details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
@@ -58,46 +61,99 @@ footer{max-width:960px;margin:auto;padding:30px 20px 50px;color:var(--muted);fon
 <section id="inicio">
   <h1>Vanesa Borja</h1>
   <p class="lead">Estudiante de quinto semestre de Ingeniería Informática. Aquí reúno quién soy, qué sé hacer, cómo aprendo y los proyectos que he construido.</p>
-  <!-- EDITA: escribe 2 o 3 líneas sobre tus intereses (software, redes, datos, IA, etc.) -->
 </section>
 
 <section id="cv">
   <h2>Mi CV</h2>
-  <p class="sub">Versión web de mi currículum. También puedes descargarlo en PDF.</p>
+  <p class="sub">Versión web de mi currículum. También puedes abrirlo o descargarlo en PDF.</p>
   <div class="grid">
     <div class="box">
       <h3>Perfil profesional</h3>
-      <p><!-- EDITA: presentación de 3 a 5 líneas sobre tus intereses y perfil --> Escribe aquí tu presentación.</p>
+      <p>Estudiante de quinto semestre de Ingeniería Informática en el Tecnológico de Estudios Superiores de San Felipe del Progreso. Me interesa la inteligencia artificial y cuento con conocimientos en bases de datos, que busco aplicar en proyectos que organicen y aprovechen la información. Estoy en formación y busco prácticas profesionales para seguir desarrollando mis habilidades técnicas.</p>
     </div>
     <div class="box">
       <h3>Formación</h3>
       <ul>
-        <li>Ingeniería Informática, 5.º semestre (escribe tu institución)</li>
-        <li>Cursos o certificaciones (solo los reales)</li>
+        <li>Ingeniería Informática, 5.º semestre. Tecnológico de Estudios Superiores de San Felipe del Progreso.</li>
+        <li>Curso: Artificial Intelligence Technology and Applications.</li>
       </ul>
     </div>
     <div class="box">
       <h3>Habilidades técnicas</h3>
       <ul>
-        <li>Lenguajes y herramientas que dominas</li>
-        <li>Bases de datos, redes, control de versiones…</li>
+        <li>Bases de datos y SQL</li>
+        <li>Python</li>
+        <li>Astro y FastAPI</li>
+        <li>Visual Studio Code</li>
+        <li>Arduino</li>
+        <li>Microsoft Word y PowerPoint</li>
       </ul>
     </div>
     <div class="box">
-      <h3>Habilidades blandas e idiomas</h3>
+      <h3>Habilidades blandas</h3>
       <ul>
-        <li>Trabajo en equipo, comunicación…</li>
-        <li>Idiomas y nivel</li>
+        <li>Trabajo en equipo</li>
+        <li>Responsabilidad</li>
+        <li>Resolución de problemas</li>
+        <li>Organización</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Idiomas</h3>
+      <ul>
+        <li>Español: nativo</li>
+        <li>Inglés: básico-intermedio</li>
       </ul>
     </div>
   </div>
-  <a class="btn" href="cv.pdf" download>Descargar CV en PDF</a>
+  <div class="acciones">
+    <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Abrir CV en PDF</a>
+    <a class="btn alt" href="cv.pdf" download="CV_Vanesa_Borja.pdf">Descargar CV</a>
+  </div>
 </section>
 
 <section id="proyectos">
   <h2>Mis proyectos</h2>
-  <p class="sub">Proyectos de software, aplicaciones, bases de datos, sitios web o prototipos. Cada ficha explica el problema, mi aportación y el estado actual.</p>
-  <div class="grid" id="lista-proyectos"></div>
+  <p class="sub">Proyectos de software y electrónica. Cada ficha explica el problema, mi aportación y el estado actual.</p>
+  <div class="grid">
+
+    <article class="box">
+      <span class="tag">En desarrollo</span>
+      <h3>Lotería digital trilingüe</h3>
+      <dl>
+        <dt>Tipo</dt><dd>Material educativo digital con electrónica. Trabajo en equipo.</dd>
+        <dt>Problema que resuelve</dt><dd>Apoyar a niños de una escuela con vocabulario en español, inglés y mazahua. Está pensada para donarse a una escuela.</dd>
+        <dt>Tecnologías</dt><dd>Arduino, Visual Studio Code, placa NodeMCU ESP32, módulo lector de micro SD y cables jumper.</dd>
+        <dt>Mi aportación</dt><dd>Busqué las palabras para la lotería y ayudé a elaborar un documento con diagramas UML.</dd>
+        <dt>Pendiente</dt><dd>Terminar el desarrollo y entregarla a la escuela.</dd>
+      </dl>
+    </article>
+
+    <article class="box">
+      <span class="tag">Finalizado</span>
+      <h3>Taller de Word y PowerPoint para niños de primaria</h3>
+      <dl>
+        <dt>Tipo</dt><dd>Proyecto integrador de alfabetización digital. Trabajo en equipo.</dd>
+        <dt>Periodo</dt><dd>Marzo a julio de 2026.</dd>
+        <dt>Problema que resuelve</dt><dd>Enseñar a niños de primaria a usar Word y PowerPoint.</dd>
+        <dt>Tecnologías</dt><dd>Word, PowerPoint y presentaciones de apoyo.</dd>
+        <dt>Mi aportación</dt><dd>Ayudé con la presentación y apoyé a los niños que no entendían bien.</dd>
+      </dl>
+    </article>
+
+    <article class="box">
+      <span class="tag">Finalizado</span>
+      <h3>Tienda de maquillaje en línea</h3>
+      <dl>
+        <dt>Tipo</dt><dd>Desarrollo web completo para una materia. Proyecto individual.</dd>
+        <dt>Fecha</dt><dd>Septiembre de 2026.</dd>
+        <dt>Tecnologías</dt><dd>Astro, FastAPI (Python) y Visual Studio Code, con imágenes de productos.</dd>
+        <dt>Mi aportación</dt><dd>Realicé todo el proyecto: diseño de la interfaz, servidor y programación.</dd>
+        <dt>Evidencia</dt><dd>Capturas de pantalla por agregar.</dd>
+      </dl>
+    </article>
+
+  </div>
 </section>
 
 <section id="actividades">
@@ -112,24 +168,6 @@ footer{max-width:960px;margin:auto;padding:30px 20px 50px;color:var(--muted);fon
 </footer>
 
 <script>
-// Proyectos: duplica o edita estos bloques
-const proyectos = [1,2,3].map(n => ({
-  nombre: "Nombre del proyecto " + n,
-  estado: "Finalizado / En desarrollo / En prueba / Idea"
-}));
-document.getElementById("lista-proyectos").innerHTML = proyectos.map(p => `
-  <article class="box">
-    <span class="tag">${p.estado}</span>
-    <h3>${p.nombre}</h3>
-    <dl>
-      <dt>Problema que resuelve</dt><dd>Describe el problema y los usuarios.</dd>
-      <dt>Tecnologías</dt><dd>Herramientas y lenguajes usados.</dd>
-      <dt>Mi aportación</dt><dd>Qué hiciste tú en el proyecto.</dd>
-      <dt>Evidencia</dt><dd>Captura, demo, video o <a href="#">enlace al repositorio</a>.</dd>
-    </dl>
-  </article>`).join("");
-
-// Actividades: cambia el título de cada una cuando la elijas
 const ejes = [
   ["Desarrollo personal y social", "Ej.: Manejo emocional, Toma de decisiones, Proyecto de vida"],
   ["Aprendizaje y proyectos", "Ej.: Aprendizaje autorregulado, Administración por proyectos"],
